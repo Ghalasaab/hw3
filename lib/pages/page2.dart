@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class Page2 extends StatelessWidget {
   const Page2({super.key});
+ 
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +21,7 @@ class Page2 extends StatelessWidget {
         child: Column(
           children :[
             const Text("title"),
-              style:TextStyle(
+              const style:TextStyle(
               color:Colors.white,
               fontsize:40,
               fontWeight:FontWeight.normal ,
