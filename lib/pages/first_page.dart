@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:ui' ;
 
 class FirstPage extends StatelessWidget {
   const FirstPage({super.key});
@@ -9,24 +8,35 @@ class FirstPage extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          title: const Text("QUIZ 1"),
-          backgroundColor: Colors.blue.shade200,
+          title: const Text("Home"),
+          backgroundColor: const Color.fromARGB(255, 155, 16, 168),
         ),
         body: Column(
           children: [
+            const Text("Hello"),
             Container(
               height: 120,
               width: 200,
-              color: Colors.red.shade300,
-              child: const Text("Faisal"),
+              color: const Color.fromARGB(255, 113, 144, 190),
+              child: const Text("About the academy "),
             ),
             Container(
               height: 120,
               width: 200,
-              color: Colors.yellow.shade300,
-              child: const Text("CSS"),
+              color: const Color.fromARGB(255, 113, 144, 190),
+              child: const Text("Leaders board"),
+            ), //  عموما الكونتينر يكون حسب التشايلد و sعرض الكولوم حسب عرض اعرض الابناء
+            Container(
+              height: 120,
+              width: 200,
+              color: const Color.fromARGB(255, 113, 144, 190),
+              child: const Text("Our platforms"),
             ),
-            const Text("Welcome")
+            ElevatedButton(
+                onPressed: () {
+                  print(" click ");
+                },
+                child: const Text("here")),
           ],
         ));
   }
