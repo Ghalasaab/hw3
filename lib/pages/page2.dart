@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:day4/pages/first_page.dart';
 
 class Page2 extends StatelessWidget {
   const Page2({super.key});
@@ -19,15 +20,45 @@ class Page2 extends StatelessWidget {
         color: Colors.blue.shade300,
         padding:const EdgeInsets.only(top:20 , left:10),
         child: Column(
-          children :[
-            const Text("title"),
-              const style:TextStyle(
-              color:Colors.white,
-              fontsize:40,
-              fontWeight:FontWeight.normal ,
+           children: [
+            const Text(
+                "title",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 40,
+                  fontWeight: FontWeight.normal,
+                ),
+            ),
+            Row (
+              mainAxisAlignment: MainAxisAlignment.spaceAround ,
+              children: [
+                const Icon (Icons.heart_broken_outlined),
+                ElevatedButton(
+                  onPressed: (){
+                    Navigator.push (
+                      context,
+                      MaterialPageRoute(
+                        builder : (context) => const FirstPage(),
+                      ));
+                  },
+                  child: const Text("move"))
+               ],
+              )
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+/*
+  ],
+                )
+              ],
             )
-          ]
+      ),
         )
       )) );
   }
 }
+*/
